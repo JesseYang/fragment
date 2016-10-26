@@ -77,8 +77,7 @@ class FragModel(object):
 				current_layer = tf.nn.relu(with_bias)
 		return current_layer
 
-	def loss(self,
-			 input_data):
+	def loss(self, input_data):
 		image, label = self._preprocess(input_data)
 
 		output = self._create_network(image)
@@ -91,8 +90,7 @@ class FragModel(object):
 		tf.scalar_summary('loss', reduced_loss)
 		return reduced_loss
 
-	def generate(self,
-				 image):
+	def generate(self, image):
 		image, _ = self._preprocess(input_data=image,
 									generate=True)
 		output = self._create_network(image)
