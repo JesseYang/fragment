@@ -21,7 +21,7 @@ FRAG_PARAMS = './frag_params.json'
 L2_REGULARIZATION_STRENGTH = 0
 
 def get_arguments():
-	parser = argparse.ArgumentParser(description='segmentation network')
+	parser = argparse.ArgumentParser(description='fragment network')
 	parser.add_argument('--batch_size', type=int, default=BATCH_SIZE,
 						help='How many image files to process at once.')
 	parser.add_argument('--num_steps', type=int, default=NUM_STEPS,
