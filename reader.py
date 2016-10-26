@@ -26,7 +26,7 @@ def preprocess_images(height, width_pad):
 				resized_image = misc.imresize(image, (height, image.shape[1]))
 				print resized_image.shape
 				pad_image = np.pad(array=resized_image,
-								   pad_widt=((0, 0), (width_pad, width_pad)),
+								   pad_width=((0, 0), (width_pad, width_pad)),
 								   mode='constant',
 								   constant_values=(255, 255))
 			misc.imsave('training_set/pad_images/' + filename, pad_image)
